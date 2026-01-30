@@ -33,7 +33,7 @@ If you only want to generate parts of the data you can do so by commenting out t
 
 ### Preparing Real-world Data
 
-The identifiers of all stations whose data we downloaded from the ISD database are given in the file [isd_data/isd_stations.txt](isd_data/isd_stations.txt) in the format `{usaf}-{wban}`, one per line. You can download the data from the [NOAA ISD database](https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database).
+The identifiers of all stations whose data we downloaded from the ISD database are given in the file [isd_data/isd_stations.txt](isd_data/isd_stations.txt) in the format `{usaf}-{wban}`, one per line. The similar file [isd_data/isd_stations_selected.txt](isd_data/isd_stations_selected.txt) contains the identifiers for the subset of stations that remained after the filtering (and thus make up the actual experiment data) described in the paper. You can download the data from the [NOAA ISD database](https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database).
 Post-download the ISD data has to be aggregated per station into a csv file matching the schema given in [isd_data/aggregated_by_station/010013-99999.csv](isd_data/aggregated_by_station/010013-99999.csv),
 and from there converted into the actual input files for the benchmark runners.
 This latter step can be accomplished via the provided python script [isd_data/make_experiment_files.py](isd_data/make_experiment_files.py). Run this script via
