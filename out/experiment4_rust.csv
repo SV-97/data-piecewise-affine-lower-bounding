@@ -1,0 +1,2 @@
+uid,n_samples,Ours,Clarabel,CPLEX,HiGHS,Clarabel (obj),CPLEX (obj),HiGHS (obj),Ours (obj),Ours (iters),Ours (expand_iters),Ours (subdiv_iters)
+0,2931,0.00057574,0.013252374,0.004760744,0.006918843,,,10354.13704249821,10354.13704249821,24,1,21

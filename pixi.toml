@@ -1,0 +1,28 @@
+[workspace]
+authors = ["Stefan Volz <volzstefan97@googlemail.com>"]
+channels = ["conda-forge"]
+name = "data-piecewise-affine-lower-bounding"
+platforms = ["linux-64", "win-64", "osx-64"]
+version = "0.1.0"
+
+[tasks]
+generate-data = { cmd = "cargo run --release", cwd = "generate_data", env = { RUST_LOG = "info" } }
+R-bench = { cmd="Rscript main.r", cwd = "run_benchmarks/from_r"}
+py-bench = { cmd = "uv run main.py", cwd = "run_benchmarks/from_python" }
+rs-bench = { cmd = "cargo run --release --", cwd = "run_benchmarks/from_rust",  env = { RUST_LOG = "info", CPLEX_PATH="$HOME/opt/ibm/ilog/cplex/cplex" } }
+isd-json-from-csv = { cmd = "uv run convert_csv_to_json.py", cwd = "isd_data" }
+
+[dependencies]
+r-base = ">=4.5.2"
+r-l1pack = ">=0.62"
+r-jsonlite = ">=2.0.0"
+r-dplyr = ">=1.1.4"
+r-stringr = ">=1.6.0"
+rust = ">=1.92.0"
+uv = ">=0.9.27"
+make = ">=4.4.1"
+clang = ">=21.1.8,<22"
+libcxx = ">=7.0.0,<22"
+cmake = ">=4.2.3,<5"
+c-compiler = ">=1.0.1,<2"
+cxx-compiler = ">=1.0.1,<2"
