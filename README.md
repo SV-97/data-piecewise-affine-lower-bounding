@@ -1,5 +1,7 @@
 # Data reproduction for *Fast and Exact Least Absolute Deviations Line Fitting via Piecewise Affine Lower-Bounding*
 
+This data contains all files needed to reproduce the experiments from the paper *Fast and Exact Least Absolute Deviations Line Fitting via Piecewise Affine Lower-Bounding*. For further background information please see the main repository [https://github.com/SV-97/piecewise-affine-lower-bounding].
+
 ## Setting up the Environment
 
 All dependencies and necessary software except for the proprietary CPLEX can be installed automatically via Pixi, a cross-platform package manager.
